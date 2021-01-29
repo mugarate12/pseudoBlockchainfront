@@ -1,0 +1,47 @@
+.headerContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  height: 60px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  border-bottom-color: #d3c5c5;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  
+  background-color: #C4C4C4;
+}
+
+.btnsContainer {
+  width: 210px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-right: 15px;
+}
+
+.menuContainer {
+  margin-right: 15px;
+}
+
+.sideMenuContainer {
+  width: 200px;
+}
+
+@media (max-width: 600px) {
+  .btnsContainer {
+    width: auto;
+  }
+
+  .sideMenuContainer {
+    width: 50%;
+  }
+}

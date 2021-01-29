@@ -5,13 +5,7 @@
   height: calc(100vh - 60px);
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.btnContainer {
-  width: 320px;
-
-  display: flex;
-  justify-content: space-between;
 }

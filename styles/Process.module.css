@@ -1,0 +1,13 @@
+.contentContainer {
+  background-color: rgba(196, 196, 196, 0.8);
+
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  border-radius: 20px;
+
+  padding: 40px;
+}
