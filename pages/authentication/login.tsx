@@ -46,9 +46,9 @@ export default function LoginUser() {
     }
   }
 
-  if (!!sessionStorage.getItem('email') && !!sessionStorage.getItem('tipo')) {
-    router.push('/query/process')
-  }
+  // if (!!sessionStorage.getItem('email') && !!sessionStorage.getItem('tipo')) {
+  //   router.push('/query/process')
+  // }
 
   return (
     <Layout>
