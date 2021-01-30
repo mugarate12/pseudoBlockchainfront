@@ -80,6 +80,9 @@ export default function ProcessBlocks() {
               <Typography color='textPrimary' component="p">Localização</Typography>
               <Typography color='textSecondary' component="p">{block.localizacao}</Typography>
 
+              <Typography color='textPrimary' component="p">Data</Typography>
+              <Typography color='textSecondary' component="p">{block.data}</Typography>
+
               <Typography color='textPrimary' component="p">Temperatura</Typography>
               <Typography color='textSecondary' component="p">{block.temperatura}</Typography>
 

@@ -35,19 +35,19 @@ const useStyles = makeStyles({
 export default function CreateProductTransport() {
   const classes = useStyles()
 
-  const [date, setDate] = useState<string>('')
+  const [data, setDate] = useState<string>('')
   const [temperatura, setTemperatura] = useState<number>(0)
   const [qualidade_do_produto, setQualidade_do_produto] = useState<number>(0)
   const [process_id, setProcess_id] = useState<number>(0)
   
   async function createProduct() {
-    const isNotEmptyFields = !!temperatura && !!process_id && !!date && !!qualidade_do_produto
+    const isNotEmptyFields = !!temperatura && !!process_id && !!data && !!qualidade_do_produto
     
     if (isNotEmptyFields) {
       console.log(sessionStorage.getItem('tipo'))
       
       await api.post(`/product?tipo=transporte`, {
-        date,
+        data,
         temperatura,
         qualidade_do_produto,
         process_id
@@ -84,7 +84,7 @@ export default function CreateProductTransport() {
           <TextField 
             variant="outlined"
             type="date"
-            value={date}
+            value={data}
             onChange={(event) => setDate(String(event.target.value))}
           />
 

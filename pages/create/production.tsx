@@ -39,10 +39,11 @@ export default function CreateProductProduction() {
   const [localizacao, setLocalização] = useState<string>('')
   const [temperatura, setTemperatura] = useState<number>(0)
   const [ITGU, setITGU] = useState<number>(0)
+  const [data, setDate] = useState<string>('')
 
 
   async function createProduct() {
-    const isNotEmptyFields = !!quantidade_em_litros && !!localizacao && !!temperatura && !!ITGU
+    const isNotEmptyFields = !!quantidade_em_litros && !!localizacao && !!temperatura && !!ITGU && !!data
     
     if (isNotEmptyFields) {
       console.log(sessionStorage.getItem('tipo'))
@@ -51,7 +52,8 @@ export default function CreateProductProduction() {
         quantidade_em_litros,
         localizacao,
         temperatura,
-        ITGU
+        ITGU,
+        data
       })
         .then(response => {
           alert(response.data.sucess)
@@ -79,7 +81,7 @@ export default function CreateProductProduction() {
 
         <form 
           className={styles.form}
-          style={{height: '350px'}}
+          style={{height: '380px'}}
         >
           <TextField 
             label="quantidade em litros" 
@@ -95,6 +97,13 @@ export default function CreateProductProduction() {
             value={localizacao}
             onChange={(event) => setLocalização(String(event.target.value))}
             // type="number"
+          />
+
+          <TextField 
+            variant="outlined" 
+            type="date"
+            value={data}
+            onChange={(event) => setDate(String(event.target.value))}
           />
 
           <TextField 
